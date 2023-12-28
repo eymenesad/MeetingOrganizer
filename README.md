@@ -31,6 +31,8 @@ python main.py
 
 Run the Flask application:
 flask run
+
+
 Open your web browser and go to http://localhost:5000 to access the Meeting Organizer.
 
 Usage

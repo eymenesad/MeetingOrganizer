@@ -15,11 +15,16 @@
         </tr>
         {% for meeting in meetings %}
         <tr>
-            <td>{{ meeting.topic }}</td>
-            <td>{{ meeting.date }}</td>
-            <td>{{ meeting.start_time }}</td>
-            <td>{{ meeting.end_time }}</td>
-            <td>{{ meeting.participants }}</td>
+            <td>{{ meeting['topic'] }}</td>
+            <td>{{ meeting['date'] }}</td>
+            <td>{{ meeting['start_time'] }}</td>
+            <td>{{ meeting['end_time'] }}</td>
+            <td>{{ meeting['participants'] }}</td>
+            <td>
+                <form action="{{ url_for('delete_meeting', id=meeting['id']) }}" method="post">
+                    <input type="submit" value="Sil">
+                </form>
+            </td>
         </tr>
         {% endfor %}
     </table>

@@ -1,4 +1,5 @@
 Meeting Organizer
+
 Meeting Organizer is a simple web application that allows users to record, update, and manage their meetings. It provides an easy way to keep track of meeting details such as the topic, date, start time, end time, and participants. This project is built using Flask, a Python web framework, and SQLite for the database.
 
 Features
@@ -18,10 +19,16 @@ To get this project up and running on your local machine, follow these steps:
 Clone the repository:
 git clone https://github.com/yourusername/meeting-organizer.git
 cd meeting-organizer
+
+
 Install the required dependencies:
 pip install -r requirements.txt
+
+
 Initialize the database:
 python main.py
+
+
 Run the Flask application:
 flask run
 Open your web browser and go to http://localhost:5000 to access the Meeting Organizer.

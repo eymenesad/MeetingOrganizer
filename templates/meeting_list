@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toplantı Listesi</title>
+</head>
+<body>
+    <h1>Toplantı Listesi</h1>
+    <table border="1">
+        <tr>
+            <th>Konu</th>
+            <th>Tarih</th>
+            <th>Başlangıç Saati</th>
+            <th>Bitiş Saati</th>
+            <th>Katılımcılar</th>
+        </tr>
+        {% for meeting in meetings %}
+        <tr>
+            <td>{{ meeting.topic }}</td>
+            <td>{{ meeting.date }}</td>
+            <td>{{ meeting.start_time }}</td>
+            <td>{{ meeting.end_time }}</td>
+            <td>{{ meeting.participants }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<form method="POST">
+    <label for="topic">Toplantı Konusu:</label>
+    <input type="text" name="topic" value="{{ meeting['topic'] }}" required>
+    <label for="date">Tarih:</label>
+    <input type="date" name="date" value="{{ meeting['date'] }}" required>
+    <label for="start_time">Başlangıç Saati:</label>
+    <input type="time" name="start_time" value="{{ meeting['start_time'] }}" required>
+    <label for="end_time">Bitiş Saati:</label>
+    <input type="time" name="end_time" value="{{ meeting['end_time'] }}" required>
+    <label for="participants">Katılımcılar:</label>
+    <input type="text" name="participants" value="{{ meeting['participants'] }}" required>
+    <button type="submit">Güncelle</button>
+</form>

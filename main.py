@@ -22,7 +22,7 @@ def init_db():
 
 @app.route('/')
 def index():
-    return 'Meeting Organizer Ana Sayfası'
+    return render_template('index.html')
 
 @app.route('/create-meeting', methods=['GET', 'POST'])
 def create_meeting():
@@ -70,6 +70,7 @@ def update_meeting(id):
         meeting = conn.execute('SELECT * FROM meetings WHERE id = ?', (id,)).fetchone()
         conn.close()
         return render_template('update_meeting.html', meeting=meeting)
+
 @app.route('/delete-meeting/<int:id>', methods=['POST'])
 def delete_meeting(id):
     conn = get_db_connection()

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toplantı Listesi</title>
+</head>
+<body>
+    <h1>Toplantı Listesi</h1>
+    <table border="1">
+        <tr>
+            <th>Konu</th>
+            <th>Tarih</th>
+            <th>Başlangıç Saati</th>
+            <th>Bitiş Saati</th>
+            <th>Katılımcılar</th>
+        </tr>
+        {% for meeting in meetings %}
+        <tr>
+            <td>{{ meeting['topic'] }}</td>
+            <td>{{ meeting['date'] }}</td>
+            <td>{{ meeting['start_time'] }}</td>
+            <td>{{ meeting['end_time'] }}</td>
+            <td>{{ meeting['participants'] }}</td>
+            <td>
+                <form action="{{ url_for('delete_meeting', id=meeting['id']) }}" method="post">
+                    <input type="submit" value="Sil">
+                </form>
+            </td>
+            <td>
+                <a href="{{ url_for('update_meeting', id=meeting['id']) }}">Güncelle</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

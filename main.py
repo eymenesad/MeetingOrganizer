@@ -80,6 +80,7 @@ def delete_meeting(id):
     return redirect(url_for('meetings'))
 
 
+
 if __name__ == '__main__':
     init_db()
     app.run(debug=True)

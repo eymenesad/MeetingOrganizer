@@ -79,8 +79,6 @@ def delete_meeting(id):
     conn.close()
     return redirect(url_for('meetings'))
 
-
-
 if __name__ == '__main__':
     init_db()
     app.run(debug=True)

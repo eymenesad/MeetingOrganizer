@@ -41,4 +41,5 @@ Run the Flask application:
 bash
 Copy code
 flask run
+
 Open your web browser and go to http://localhost:5000 to access the Meeting Organizer.
